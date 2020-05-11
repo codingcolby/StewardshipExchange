@@ -1,0 +1,19 @@
+/* footer {
+    margin-top: 80px;
+} */
+
+footer {
+	text-align: center;
+	padding: 20px 0px 0px 0px;
+	background-color: gray;
+	box-shadow: -2px -2px 12px green;
+	height: 50px;
+	width: 100%;
+	white-space: nowrap;
+	color: black;
+	font-weight: bolder;
+}
+
+a:link {
+	color: rgb(27, 83, 27);
+}
