@@ -18,7 +18,6 @@ const Nav = (props) => {
 
 	return (
 		<div className="nav">
-			{/* <Link to="/home"> */}
 			<img src="/archivesstorage.jpg" alt="storage" />
 			<h2 className="nav-title">The Stewardship Exchange</h2>
 			<p>
