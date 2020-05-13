@@ -42,7 +42,7 @@ class RegisterPage extends Component {
 				<form className="formPanel" onSubmit={this.registerUser}>
 					<h1>Register User</h1>
 					<p>
-						Already registered? Please go to{" "}
+						Already registered? Please{" "}
 						<button
 							type="button"
 							className="link-button"
