@@ -3,17 +3,14 @@ import { connect } from "react-redux";
 import mapStoreToProps from "../../redux/mapStoreToProps";
 import "../pageview.css";
 import "../grids.css";
+import "../App/App.css";
 
 class LandingPage extends Component {
 	state = {
 		searchterm: "",
 	};
 
-	onLogin = (event) => {
-		this.props.history.push("/login");
-	};
-
-	handleSearchSubmit = (propertyName) => (event) => {
+	handleSearchTerm = (propertyName) => (event) => {
 		this.setState({
 			[propertyName]: event.target.value,
 		});
@@ -48,73 +45,65 @@ class LandingPage extends Component {
 				</div>
 
 				<div className="pageText2">
-					<form>
-						<div>
-							<input
-								className="searchInput"
-								type="text"
-								name="searchterm"
-								value={this.state.searchterm}
-								placeholder="Enter term or keyword here"
-							/>
+					<div>
+						<form>
+							<div>
+								<input
+									className="searchInput"
+									type="text"
+									name="searchterm"
+									value={this.state.searchterm}
+									placeholder="Enter term or keyword here"
+									onChange={this.handleSearchTerm("searchterm")}></input>
 
-							<button
-								className="button"
-								type="submit"
-								name="searchtermbtn"
-								onChange={this.handleSearchSubmit("search")}>
-								SEARCH
-							</button>
+								<button
+									type="submit"
+									className="searchTermBtn"
+									onClick={() => {
+										this.props.dispatch({
+											type: "GET_OFFERS",
+											payload: "searchterm",
+										});
+									}}>
+									SEARCH
+								</button>
+							</div>
+						</form>
+					</div>
+
+					<div className="datagrid">
+						<div className="datagrid-col datagrid-col_1">
+							<h4>Status</h4>
+							<div className="datagrid-row_1">
+								<p className="serverData">Server Data Here</p>
+								<p className="serverData">Server Data Here</p>
+							</div>
 						</div>
-
-						<p className="current_regnow">
-							Looking for full offer detail and contact information?{" "}
-							<button
-								type="button"
-								className="dk-link-button"
-								onClick={() => {
-									this.props.dispatch({ type: "SET_TO_REGISTER_MODE" });
-								}}>
-								Registration
-							</button>{" "}
-							is free!
-						</p>
-					</form>
-				</div>
-
-				<div className="datagrid">
-					<div className="datagrid-col datagrid-col_1">
-						<h4>Status</h4>
-						<div className="datagrid-row_1">
-							<p className="serverData">Server Data Here</p>
-							<p className="serverData">Server Data Here</p>
+						<div className="datagrid-col datagrid-col_2">
+							<h4>Date Posted</h4>
+							<div className="datagrid-row_1">
+								<p className="serverData">Server Data Here</p>
+								<p className="serverData">Server Data Here</p>
+							</div>
+						</div>
+						<div className="datagrid-col datagrid-col_3">
+							<h4>Location</h4>
+							<div className="datagrid-row_1">
+								<p className="serverData">Server Data Here</p>
+								<p className="serverData">Server Data Here</p>
+							</div>
+						</div>
+						<div className="datagrid-col datagrid-col_4">
+							<h4>Items Offered</h4>
+							<div className="datagrid-row_1">
+								<p className="serverData">Server Data Here</p>
+								<p className="serverData">Server Data Here</p>
+							</div>
 						</div>
 					</div>
-					<div className="datagrid-col datagrid-col_2">
-						<h4>Date Posted</h4>
-						<div className="datagrid-row_1">
-							<p className="serverData">Server Data Here</p>
-							<p className="serverData">Server Data Here</p>
-						</div>
-					</div>
-					<div className="datagrid-col datagrid-col_3">
-						<h4>Location</h4>
-						<div className="datagrid-row_1">
-							<p className="serverData">Server Data Here</p>
-							<p className="serverData">Server Data Here</p>
-						</div>
-					</div>
-					<div className="datagrid-col datagrid-col_4">
-						<h4>Items Offered</h4>
-						<div className="datagrid-row_1">
-							<p className="serverData">Server Data Here</p>
-							<p className="serverData">Server Data Here</p>
-						</div>
-					</div>{" "}
 				</div>
 			</div>
 		);
 	}
 }
-
 export default connect(mapStoreToProps)(LandingPage);
