@@ -8,7 +8,34 @@ import "../pageview.css";
 
 const HowItWorksPage = () => (
 	<div className="container">
-		<p>How It Works Page</p>
+		<div className="pageText">
+			<h2>How It Works Page</h2>
+			<p>
+				How It Works Content Goes Here How It Works Content Goes Here How It
+				Works Content Goes Here How It Works Content Goes Here How It Works
+				Content Goes Here How It Works Content Goes Here How It Works Content
+				Goes Here How It Works Content Goes Here
+			</p>
+			<h3>FAQs</h3>
+			<ul>
+				<li>Q: How It Works Content Goes Here</li>
+				<li>A: How It Works Content Goes Here</li>
+				<br />
+				<li>Q: How It Works Content Goes Here</li>
+				<li>A: How It Works Content Goes Here</li>
+				<br />
+				<li>Q: How It Works Content Goes Here</li>
+				<li>A: How It Works Content Goes Here</li>
+				<br />
+			</ul>
+
+			<p>
+				How It Works Content Goes Here How It Works Content Goes Here How It
+				Works Content Goes Here How It Works Content Goes Here How It Works
+				Content Goes Here How It Works Content Goes Here How It Works Content
+				Goes Here
+			</p>
+		</div>
 	</div>
 );
 
