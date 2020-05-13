@@ -3,8 +3,176 @@ Container
 -------------------------------------------------------------------------------- */
 
 .container {
-	padding: 15px 50px 15px 50px;
+	padding: 15px 20px 15px 60px;
 	min-height: 475px;
 	border-right: 15px solid black;
 	border-left: 15px solid black;
+	/* background-color: rgb(216, 216, 216); */
+	background-color: rgb(174, 199, 179);
 }
+
+/* --------------------------------------------------------------------------------
+Elements
+-------------------------------------------------------------------------------- */
+h2 {
+	margin: 0px 0px 25px 0px;
+	vertical-align: top;
+}
+
+.contactInput {
+	padding-left: 250px;
+	min-width: 500px;
+	max-width: 800px;
+	font-size: 18px;
+}
+
+.contactlabel {
+	padding-right: 50px;
+	font-size: 18px;
+	color: black;
+	font-weight: bold;
+}
+
+/* --------------------------------------------------------------------------------
+Grid
+-------------------------------------------------------------------------------- */
+
+.storygrid {
+	padding: 0px 5px 0px 5px;
+
+	display: flex;
+	flex: 0 1 auto;
+	/* defaults to 'row' */
+	flex-direction: row;
+	flex-wrap: wrap;
+	/* defaults to 'flex-start' */
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+
+.storygrid-col {
+	flex: 0 0 auto;
+	padding: 0 0.5rem 0.5rem;
+	box-sizing: border-box;
+	border: 5px groove rgb(85, 128, 104);
+	border-collapse: collapse;
+	margin: 20px;
+	background-color: lightgray;
+	border-radius: 0px 15px 0px 0px;
+}
+
+.storygrid-col_1 {
+	flex-basis: 45%;
+	max-width: 45%;
+	display: inline-flexbox;
+	box-shadow: 12px -4px 8px silver;
+}
+
+.storygrid-row_1 {
+	max-height: auto;
+	border-top: 2px dashed black;
+}
+
+.storygrid-col_2 {
+	flex-basis: 45%;
+	max-width: 45%;
+	display: inline-flex;
+	box-shadow: 12px -4px 8px silver;
+}
+
+.storygrid-col_3 {
+	flex-basis: content;
+	display: inline-flexbox;
+	max-width: 50%;
+	float: right;
+	vertical-align: top;
+	border-left: 2px dashed black;
+	border-top: 0;
+	border-right: 0;
+	border-bottom: 0;
+}
+.datagrid {
+	margin-top: 10px;
+	padding: 0px 5%px 0px 5px;
+	display: flex;
+	flex: 0 1 auto;
+	/* defaults to 'row' */
+	flex-direction: row;
+	flex-wrap: wrap;
+	/* defaults to 'flex-start' */
+	justify-content: flex-start;
+	align-items: flex-start;
+	grid-column-gap: 10px;
+}
+
+.datagrid-col {
+	flex: 0 0 auto;
+	padding: 0 0.5rem 0.5rem;
+	box-sizing: border-box;
+	border: 1px solid black;
+	border-collapse: collapse;
+	grid-column-gap: 10px;
+}
+
+.datagrid-col_1 {
+	flex-basis: 20%;
+	max-width: 20%;
+}
+
+.datagrid-col_2 {
+	flex-basis: 20%;
+	max-width: 20%;
+}
+
+.datagrid-col_3 {
+	flex-basis: 20%;
+	max-width: 20%;
+}
+
+.datagrid-col_4 {
+	flex-basis: 40%;
+	max-width: 40%;
+}
+
+.pageText {
+	background-color: rgb(123, 170, 123);
+	padding: 10px;
+	height: 25%;
+	border-radius: 0px 25px 0px 0px;
+	box-shadow: 12px -4px 8px rgb(155, 151, 151);
+}
+
+.pageText2 {
+	margin-top: 10px;
+	background-color: silver;
+	padding: 10px;
+	height: 25%;
+	border-radius: 0px 25px 0px 0px;
+	/* box-shadow: 12px -4px 8px silver; */
+	box-shadow: 12px -4px 8px rgb(155, 151, 151);
+}
+
+.contactGrid {
+	display: flex;
+	align-items: center;
+	/* justify-content: space-around; */
+	border: 1px solid black;
+}
+
+/* label {
+	grid-column: 1;
+	border: 2px solid black;
+	width: 10px;
+}
+
+input {
+	margin-left: 10px;
+	border: 2px solid black;
+	grid-column: 2;
+	width: 50px;
+}
+
+button {
+	grid-column: 1;
+	border: 2px solid black;
+} */
