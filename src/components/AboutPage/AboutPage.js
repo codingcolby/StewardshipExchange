@@ -33,57 +33,59 @@ class AboutPage extends Component {
 						registration, and hosting.
 					</p>
 				</div>
-				<p>We'd love to hear from you!</p>
-				<div className="contactGrid">
-					<form>
-						<div>
-							<label htmlFor="person_name">
-								<span className="contactlabel">Name</span>
-								<input
-									className="contactInput"
-									type="text"
-									name="person_name"
-									value={this.state.person_name}
-									onChange={this.handleInputChangeFor("person_name")}
-								/>
-							</label>
-						</div>
+				<div className="contactus">
+					<p>We'd love to hear from you!</p>
 
+					<div className="contactGrid">
 						<div>
-							<label htmlFor="person_contact">
-								<span className="contactlabel">Email and/or Phone Number</span>
-								<input
-									className="contactInput"
-									type="text"
-									name="person_contact"
-									value={this.state.person_contact}
-									onChange={this.handleInputChangeFor("person_contact")}
-								/>
-							</label>
+							<p className="contactGridLabels">Name</p>
+							<p className="contactGridLabels">Email</p>
+							<p className="contactGridLabels">Message</p>
+							<p></p>
 						</div>
-
 						<div>
-							<label htmlFor="contact_msg">
-								<span className="contactlabel">Message</span>
-								<input
-									className="contactInput"
-									type="text"
-									name="contact_msg"
-									value={this.state.contact_msg}
-									onChange={this.handleInputChangeFor("contact_msg")}
-								/>
-							</label>
-						</div>
+							<form>
+								<div className="formfields">
+									<input
+										className="contactInput"
+										type="text"
+										name="person_name"
+										value={this.state.person_name}
+										onChange={this.handleInputChangeFor("person_name")}
+									/>
+								</div>
 
-						<button
-							type="button"
-							className="contactSubmitBtn"
-							onClick={() => {
-								this.props.dispatch({ type: "SET_CONTACT" });
-							}}>
-							Submit
-						</button>
-					</form>
+								<div className="formfields">
+									<input
+										className="contactInput"
+										type="text"
+										name="person_contact"
+										value={this.state.person_contact}
+										onChange={this.handleInputChangeFor("person_contact")}
+									/>
+								</div>
+
+								<div className="formfields">
+									<input
+										className="contactInput"
+										type="text"
+										name="contact_msg"
+										value={this.state.contact_msg}
+										onChange={this.handleInputChangeFor("contact_msg")}
+									/>
+								</div>
+
+								<button
+									type="button"
+									className="contactSubmitBtn"
+									onClick={() => {
+										this.props.dispatch({ type: "SET_CONTACT" });
+									}}>
+									Submit
+								</button>
+							</form>
+						</div>
+					</div>
 				</div>
 			</div>
 		);
