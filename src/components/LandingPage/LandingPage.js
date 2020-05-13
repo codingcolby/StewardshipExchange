@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import mapStoreToProps from "../../redux/mapStoreToProps";
 import "../pageview.css";
-import "./LandingPage.css";
+import "../grids.css";
 
 class LandingPage extends Component {
 	state = {
@@ -65,39 +65,52 @@ class LandingPage extends Component {
 								onChange={this.handleSearchSubmit("search")}>
 								SEARCH
 							</button>
-							<p className="current_regnow">Some text here</p>
 						</div>
+
+						<p className="current_regnow">
+							Looking for full offer detail and contact information?{" "}
+							<button
+								type="button"
+								className="dk-link-button"
+								onClick={() => {
+									this.props.dispatch({ type: "SET_TO_REGISTER_MODE" });
+								}}>
+								Registration
+							</button>{" "}
+							is free!
+						</p>
 					</form>
-					<div className="datagrid">
-						<div className="datagrid-col datagrid-col_1">
-							<h4>Status</h4>
-							<div className="datagrid-row_1">
-								<p className="serverData">Server Data Here</p>
-								<p className="serverData">Server Data Here</p>
-							</div>
+				</div>
+
+				<div className="datagrid">
+					<div className="datagrid-col datagrid-col_1">
+						<h4>Status</h4>
+						<div className="datagrid-row_1">
+							<p className="serverData">Server Data Here</p>
+							<p className="serverData">Server Data Here</p>
 						</div>
-						<div className="datagrid-col datagrid-col_2">
-							<h4>Date Posted</h4>
-							<div className="datagrid-row_1">
-								<p className="serverData">Server Data Here</p>
-								<p className="serverData">Server Data Here</p>
-							</div>
-						</div>
-						<div className="datagrid-col datagrid-col_3">
-							<h4>Location</h4>
-							<div className="datagrid-row_1">
-								<p className="serverData">Server Data Here</p>
-								<p className="serverData">Server Data Here</p>
-							</div>
-						</div>
-						<div className="datagrid-col datagrid-col_4">
-							<h4>Items Offered</h4>
-							<div className="datagrid-row_1">
-								<p className="serverData">Server Data Here</p>
-								<p className="serverData">Server Data Here</p>
-							</div>
-						</div>{" "}
 					</div>
+					<div className="datagrid-col datagrid-col_2">
+						<h4>Date Posted</h4>
+						<div className="datagrid-row_1">
+							<p className="serverData">Server Data Here</p>
+							<p className="serverData">Server Data Here</p>
+						</div>
+					</div>
+					<div className="datagrid-col datagrid-col_3">
+						<h4>Location</h4>
+						<div className="datagrid-row_1">
+							<p className="serverData">Server Data Here</p>
+							<p className="serverData">Server Data Here</p>
+						</div>
+					</div>
+					<div className="datagrid-col datagrid-col_4">
+						<h4>Items Offered</h4>
+						<div className="datagrid-row_1">
+							<p className="serverData">Server Data Here</p>
+							<p className="serverData">Server Data Here</p>
+						</div>
+					</div>{" "}
 				</div>
 			</div>
 		);

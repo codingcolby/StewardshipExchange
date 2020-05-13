@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import mapStoreToProps from "../../redux/mapStoreToProps";
 import "../pageview.css";
+import "../grids.css";
 
 // This is one of our simplest components
 // It doesn't have local state, so it can be a function component.
@@ -28,13 +29,18 @@ class AboutPage extends Component {
 					<h2>About Page</h2>
 					<p>
 						The Stewardship Exchange is entirely a volunteer effort. Currently
-						we do not have funding but intende to add a donation link here to
+						we do not have funding but intend to add a donation link here to
 						help defray the cost of further site development, domain
-						registration, and hosting.
+						registration, and hosting.{" "}
+					</p>
+					<p>
+						Please reach out to us if you have comments, ideas, an interest in
+						contributing to this project, or would like to inquire about
+						sponsorship opportuntities.
 					</p>
 				</div>
 				<div className="contactus">
-					<p>We'd love to hear from you!</p>
+					<h4>We'd love to hear from you!</h4>
 
 					<div className="contactGrid">
 						<div>
