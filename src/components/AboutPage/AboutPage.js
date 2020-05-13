@@ -31,7 +31,7 @@ class AboutPage extends Component {
 						The Stewardship Exchange is entirely a volunteer effort. Currently
 						we do not have funding but intend to add a donation link here to
 						help defray the cost of further site development, domain
-						registration, and hosting.{" "}
+						registration, and hosting.
 					</p>
 					<p>
 						Please reach out to us if you have comments, ideas, an interest in
@@ -45,7 +45,7 @@ class AboutPage extends Component {
 					<div className="contactGrid">
 						<div>
 							<p className="contactGridLabels">Name</p>
-							<p className="contactGridLabels">Email</p>
+							<p className="contactGridLabels">Email or Phone</p>
 							<p className="contactGridLabels">Message</p>
 							<p></p>
 						</div>
@@ -58,6 +58,8 @@ class AboutPage extends Component {
 										name="person_name"
 										value={this.state.person_name}
 										onChange={this.handleInputChangeFor("person_name")}
+										required
+										placeholder="required"
 									/>
 								</div>
 
@@ -68,6 +70,8 @@ class AboutPage extends Component {
 										name="person_contact"
 										value={this.state.person_contact}
 										onChange={this.handleInputChangeFor("person_contact")}
+										required
+										placeholder="required"
 									/>
 								</div>
 
@@ -78,6 +82,8 @@ class AboutPage extends Component {
 										name="contact_msg"
 										value={this.state.contact_msg}
 										onChange={this.handleInputChangeFor("contact_msg")}
+										required
+										placeholder="required"
 									/>
 								</div>
 
