@@ -1,10 +1,10 @@
-const contact = (state = {}, action) => {
+const contactReducer = (state = {}, action) => {
 	switch (action.type) {
-		case "SET_CONTACT":
+		case "SHOW_CONTACT":
 			return action.payload;
 		default:
 			return state;
 	}
 };
 
-export default contact;
+export default contactReducer;

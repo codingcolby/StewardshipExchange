@@ -1,10 +1,10 @@
-const landing = (state = {}, action) => {
+const offersReducer = (state = {}, action) => {
 	switch (action.type) {
-		case "SET_OFFERS":
+		case "SHOW_OFFERS":
 			return action.payload;
 		default:
 			return state;
 	}
 };
 
-export default landing;
+export default offersReducer;

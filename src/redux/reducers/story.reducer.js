@@ -1,10 +1,10 @@
-const story = (state = {}, action) => {
+const storyReducer = (state = {}, action) => {
 	switch (action.type) {
-		case "SET_STORY":
+		case "SHOW_STORY":
 			return action.payload;
 		default:
 			return state;
 	}
 };
 
-export default story;
+export default storyReducer;
