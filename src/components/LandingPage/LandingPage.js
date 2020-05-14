@@ -14,7 +14,7 @@ class LandingPage extends Component {
 	componentDidMount() {
 		// load up all information from the server
 		this.props.dispatch({
-			type: "GET_OFFERS",
+			type: "SHOW_OFFERS",
 			payload: response.data,
 		});
 	}
@@ -26,13 +26,6 @@ class LandingPage extends Component {
 	};
 
 	render() {
-		const offersArray = this.props.store.offers.map((item, index) => {
-			return (
-				<li key={index}>
-					{offers.agency} - {offers.off_detail}
-				</li>
-			);
-		});
 		return (
 			<div className="container">
 				<div className="pageText">
@@ -89,8 +82,10 @@ class LandingPage extends Component {
 
 					<div>
 						<h3>Current Offers</h3>
-
-						<ul>{offersArray}</ul>
+						{/* FIX FOR RENDERING  */}
+						<ul>
+							<li>{this.props.store.agency}</li>
+						</ul>
 					</div>
 
 					{/* 
