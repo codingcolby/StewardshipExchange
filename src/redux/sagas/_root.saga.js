@@ -1,7 +1,15 @@
-import { all } from 'redux-saga/effects';
-import loginSaga from './login.saga';
-import registrationSaga from './registration.saga';
-import userSaga from './user.saga';
+import { all } from "redux-saga/effects";
+import loginSaga from "./login.saga";
+import registrationSaga from "./registration.saga";
+import userSaga from "./user.saga";
+
+import deleteOffers from "./deleteOffersSaga";
+import getUsersOffers from "./getOfferByUserSaga";
+import getOffers from "./getOffersSaga";
+import getStory from "./getStorySaga";
+import postOffers from "./postOffersSaga";
+import postStory from "./postStorySaga";
+import putOffers from "./putOffersSaga";
 
 // rootSaga is the primary saga.
 // It bundles up all of the other sagas so our project can use them.
@@ -11,9 +19,16 @@ import userSaga from './user.saga';
 // the registration triggers a login
 // and login triggers setting the user
 export default function* rootSaga() {
-  yield all([
-    loginSaga(),
-    registrationSaga(),
-    userSaga(),
-  ]);
+	yield all([
+		loginSaga(),
+		registrationSaga(),
+		userSaga(),
+		deleteOffers(),
+		getUsersOffers(),
+		getOffers(),
+		getStory(),
+		postOffers(),
+		postStory(),
+		putOffers(),
+	]);
 }
