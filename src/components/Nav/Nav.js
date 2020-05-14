@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
-import LogOutButton from "../LogOutButton/LogOutButton";
+// import LogOutButton from "../LogOutButton/LogOutButton";
 import "./Nav.css";
 import mapStoreToProps from "../../redux/mapStoreToProps";
 
@@ -13,7 +13,7 @@ const Nav = (props) => {
 
 	if (props.store.user.id != null) {
 		loginLinkData.path = "/login";
-		loginLinkData.text = "login";
+		loginLinkData.text = "Login";
 	}
 
 	return (
@@ -56,10 +56,10 @@ const Nav = (props) => {
 						{/* <Link className="nav-link" to="/info">
 							Info Page
 						</Link> */}
-						<Link className="nav-link" to="/userhome">
-							User's'Home Page
+						<Link className="nav-link" to="/userpage">
+							{props.store.user.username}'s Page
 						</Link>
-						<LogOutButton className="nav-link" />
+						{/* <LogOutButton className="nav-link">Log Out</LogOutButton> */}
 					</>
 				)}
 			</div>

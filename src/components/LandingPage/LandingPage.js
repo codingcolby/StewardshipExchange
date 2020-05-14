@@ -4,11 +4,20 @@ import mapStoreToProps from "../../redux/mapStoreToProps";
 import "../pageview.css";
 import "../grids.css";
 import "../App/App.css";
+import { response } from "express";
 
 class LandingPage extends Component {
 	state = {
 		searchterm: "",
 	};
+
+	componentDidMount() {
+		// load up all information from the server
+		this.props.dispatch({
+			type: "GET_OFFERS",
+			payload: response.data,
+		});
+	}
 
 	handleSearchTerm = (propertyName) => (event) => {
 		this.setState({
@@ -17,6 +26,13 @@ class LandingPage extends Component {
 	};
 
 	render() {
+		const offersArray = this.props.store.offers.map((item, index) => {
+			return (
+				<li key={index}>
+					{offers.agency} - {offers.off_detail}
+				</li>
+			);
+		});
 		return (
 			<div className="container">
 				<div className="pageText">
@@ -71,11 +87,34 @@ class LandingPage extends Component {
 						</form>
 					</div>
 
+					<div>
+						<h3>Current Offers</h3>
+
+						<ul>{offersArray}</ul>
+					</div>
+
+					{/* 
+					<Container maxWidth={false}>
+        <Grid container spacing={2}>
+          {limitedResults.map((item, index) => (
+            <Grid
+              item
+              xs={12}
+              sm={4}
+              md={3}
+              lg={2}
+            >
+              <MoviesListItem key={index} item={item} />
+            </Grid>
+          ))}
+        </Grid>
+      </Container> */}
+					{/* 
 					<div className="datagrid">
 						<div className="datagrid-col datagrid-col_1">
 							<h4>Status</h4>
 							<div className="datagrid-row_1">
-								<p className="serverData">Server Data Here</p>
+								<p className="serverData">{this.props.offers.offer_status}</p>
 								<p className="serverData">Server Data Here</p>
 							</div>
 						</div>
@@ -100,7 +139,7 @@ class LandingPage extends Component {
 								<p className="serverData">Server Data Here</p>
 							</div>
 						</div>
-					</div>
+					</div>*/}
 				</div>
 			</div>
 		);
