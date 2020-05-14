@@ -16,6 +16,7 @@ function* addContact(action) {
 		yield axios.post(`/api/contact`, action.payload);
 		yield put({
 			type: "SHOW_CONTACT",
+			payload: "",
 		});
 	} catch (error) {
 		console.log("addContact request failed", error);
