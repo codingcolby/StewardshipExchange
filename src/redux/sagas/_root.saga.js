@@ -3,13 +3,9 @@ import loginSaga from "./login.saga";
 import registrationSaga from "./registration.saga";
 import userSaga from "./user.saga";
 
-import deleteOffers from "./deleteOffersSaga";
-import getUsersOffers from "./getOfferByUserSaga";
-import getOffers from "./getOffersSaga";
-import getStory from "./getStorySaga";
-import postOffers from "./postOffersSaga";
-import postStory from "./postStorySaga";
-import putOffers from "./putOffersSaga";
+import contactSaga from "./contactSaga";
+import offersSaga from "./offersSaga";
+import storySaga from "./storySaga";
 
 // rootSaga is the primary saga.
 // It bundles up all of the other sagas so our project can use them.
@@ -23,12 +19,9 @@ export default function* rootSaga() {
 		loginSaga(),
 		registrationSaga(),
 		userSaga(),
-		deleteOffers(),
-		getUsersOffers(),
-		getOffers(),
-		getStory(),
-		postOffers(),
-		postStory(),
-		putOffers(),
+
+		contactSaga(),
+		offersSaga(),
+		storySaga(),
 	]);
 }
