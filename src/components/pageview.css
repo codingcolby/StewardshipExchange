@@ -25,6 +25,32 @@ h4 {
 	margin: 20px 0px 5px 0px;
 }
 
+th {
+	text-align: left;
+}
+
+tr {
+	height: 35px;
+	border-bottom: 1px solid black;
+	border-radius: 5px;
+}
+
+.status {
+	width: 150px;
+}
+
+.date {
+	width: 400px;
+}
+
+.location {
+	width: 250px;
+}
+
+.description {
+	width: 800px;
+}
+
 /* SHARED ----------*/
 .pageText {
 	background-color: rgb(123, 170, 123);
