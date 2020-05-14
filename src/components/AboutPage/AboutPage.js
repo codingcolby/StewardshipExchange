@@ -91,7 +91,10 @@ class AboutPage extends Component {
 									type="button"
 									className="contactSubmitBtn"
 									onClick={() => {
-										this.props.dispatch({ type: "SET_CONTACT" });
+										this.props.dispatch({
+											type: "ADD_CONTACT",
+											payload: this.state,
+										});
 									}}>
 									Submit
 								</button>
