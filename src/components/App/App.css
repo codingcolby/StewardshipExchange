@@ -49,8 +49,6 @@ input {
 	background: none;
 	color: green;
 	border: none;
-	/* padding-top: 50px;
-	margin-bottom: 30px; */
 	font: inherit;
 	outline: 0;
 	border-bottom: 1px solid #444;
@@ -62,8 +60,6 @@ input {
 	background: none;
 	color: rgb(19, 94, 19);
 	border: none;
-	/* padding-top: 50px;
-	margin-bottom: 30px; */
 	font: inherit;
 	font-weight: bolder;
 	outline: 0;

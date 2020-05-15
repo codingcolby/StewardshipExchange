@@ -9,8 +9,9 @@ const passport = require("./strategies/user.strategy");
 
 // Route includes
 const userRouter = require("./routes/user.router");
-const offersRouter = require("./routes/offers.router");
+
 const contactRouter = require("./routes/contact.router");
+const offersRouter = require("./routes/offers.router");
 const storyRouter = require("./routes/story.router");
 
 // Body parser middleware
@@ -29,6 +30,8 @@ app.use("/api/user", userRouter);
 app.use("/api/offers", offersRouter);
 app.use("/api/contact", contactRouter);
 app.use("/api/story", storyRouter);
+app.use("/api/addoffers", offersRouter);
+app.use("/api/editoffers", offersRouter);
 
 // Serve static files
 app.use(express.static("build"));

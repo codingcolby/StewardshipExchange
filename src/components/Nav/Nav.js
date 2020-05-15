@@ -13,15 +13,14 @@ const Nav = (props) => {
 
 	if (props.store.user.id != null) {
 		loginLinkData.path = "/login";
-		loginLinkData.text = "login";
+		loginLinkData.text = "Login";
 	}
 
 	return (
 		<div className="nav">
-			{/* <Link to="/home"> */}
 			<img src="/archivesstorage.jpg" alt="storage" />
 			<h2 className="nav-title">The Stewardship Exchange</h2>
-			<p>
+			<p className="subtitle">
 				the <em>first</em> online resource for cultural heritage agencies to
 				share surplus preservation and conservation material for collections
 				care
@@ -45,22 +44,25 @@ const Nav = (props) => {
 				{/* <Link className="nav-link" to="/about">
 					About
 				</Link> */}
-				<Link className="nav-link" to={loginLinkData.path}>
-					{/* Show this link if they are logged in or not,
+				{props.store.user.id == null && (
+					<Link className="nav-link" to={loginLinkData.path}>
+						{/* Show this link if they are logged in or not,
           but call this link 'Home' if they are logged in,
           and call this link 'Login / Register' if they are not */}
-					{loginLinkData.text}
-				</Link>
+						{loginLinkData.text}
+					</Link>
+				)}
 				{/* Show the link to the info page and the logout button if the user is logged in */}
 				{props.store.user.id && (
 					<>
 						{/* <Link className="nav-link" to="/info">
 							Info Page
 						</Link> */}
-						<Link className="nav-link" to="/userhome">
-							User's'Home Page
+
+						<Link className="nav-link" to="/userpage">
+							{props.store.user.username}'s Page
 						</Link>
-						<LogOutButton className="nav-link" />
+						<LogOutButton className="logoutbtn">Log Out</LogOutButton>
 					</>
 				)}
 			</div>

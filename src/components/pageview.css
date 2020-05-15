@@ -1,143 +1,82 @@
-/* --------------------------------------------------------------------------------
-Container
--------------------------------------------------------------------------------- */
+/* CONTAINER ----------*/
 
 .container {
 	padding: 15px 20px 15px 60px;
 	min-height: 475px;
 	border-right: 15px solid black;
 	border-left: 15px solid black;
-	/* background-color: rgb(216, 216, 216); */
 	background-color: rgb(174, 199, 179);
 }
 
-/* --------------------------------------------------------------------------------
-Elements
--------------------------------------------------------------------------------- */
-h2 {
-	margin: 0px 0px 25px 0px;
+/* .container {
+	padding: 15px 50px 15px 50px;
+	min-height: 475px;
+	border-right: 15px solid black;
+	border-left: 15px solid black;
+} */
+
+/* ELEMENTS ----------*/
+h1 {
+	padding: 5px 0px 0px 5px;
+	margin: 0px 0px 0px 0px;
 	vertical-align: top;
 }
 
-.contactInput {
-	padding-left: 250px;
-	min-width: 500px;
-	max-width: 800px;
-	font-size: 18px;
+h4 {
+	margin: 20px 0px 5px 0px;
 }
 
-.contactlabel {
-	padding-right: 50px;
-	font-size: 18px;
-	color: black;
-	font-weight: bold;
+th {
+	text-align: left;
 }
 
-/* --------------------------------------------------------------------------------
-Grid
--------------------------------------------------------------------------------- */
-
-.storygrid {
-	padding: 0px 5px 0px 5px;
-
-	display: flex;
-	flex: 0 1 auto;
-	/* defaults to 'row' */
-	flex-direction: row;
-	flex-wrap: wrap;
-	/* defaults to 'flex-start' */
-	justify-content: flex-start;
-	align-items: flex-start;
+tr {
+	height: 35px;
+	border-bottom: 1px solid black;
+	border-radius: 5px;
 }
 
-.storygrid-col {
-	flex: 0 0 auto;
-	padding: 0 0.5rem 0.5rem;
-	box-sizing: border-box;
-	border: 5px groove rgb(85, 128, 104);
-	border-collapse: collapse;
-	margin: 20px;
-	background-color: lightgray;
-	border-radius: 0px 15px 0px 0px;
+.useroptions {
+	padding-bottom: 15px;
+}
+.useroptions li {
+	padding-bottom: 3px;
+	font-style: bold;
 }
 
-.storygrid-col_1 {
-	flex-basis: 45%;
-	max-width: 45%;
-	display: inline-flexbox;
-	box-shadow: 12px -4px 8px silver;
+.status {
+	width: 150px;
+	border-bottom: 1px solid black;
+	border-radius: 5px;
 }
 
-.storygrid-row_1 {
-	max-height: auto;
-	border-top: 2px dashed black;
+.date {
+	width: 400px;
+	border-bottom: 1px solid black;
+	border-radius: 5px;
 }
 
-.storygrid-col_2 {
-	flex-basis: 45%;
-	max-width: 45%;
-	display: inline-flex;
-	box-shadow: 12px -4px 8px silver;
+.location {
+	width: 250px;
+	border-bottom: 1px solid black;
+	border-radius: 5px;
 }
 
-.storygrid-col_3 {
-	flex-basis: content;
-	display: inline-flexbox;
-	max-width: 50%;
-	float: right;
-	vertical-align: top;
-	border-left: 2px dashed black;
-	border-top: 0;
-	border-right: 0;
-	border-bottom: 0;
-}
-.datagrid {
-	margin-top: 10px;
-	padding: 0px 5%px 0px 5px;
-	display: flex;
-	flex: 0 1 auto;
-	/* defaults to 'row' */
-	flex-direction: row;
-	flex-wrap: wrap;
-	/* defaults to 'flex-start' */
-	justify-content: flex-start;
-	align-items: flex-start;
-	grid-column-gap: 10px;
+.description {
+	width: 800px;
+	border-bottom: 1px solid black;
+	border-radius: 5px;
 }
 
-.datagrid-col {
-	flex: 0 0 auto;
-	padding: 0 0.5rem 0.5rem;
-	box-sizing: border-box;
-	border: 1px solid black;
-	border-collapse: collapse;
-	grid-column-gap: 10px;
-}
-
-.datagrid-col_1 {
-	flex-basis: 20%;
-	max-width: 20%;
-}
-
-.datagrid-col_2 {
-	flex-basis: 20%;
-	max-width: 20%;
-}
-
-.datagrid-col_3 {
-	flex-basis: 20%;
-	max-width: 20%;
-}
-
-.datagrid-col_4 {
-	flex-basis: 40%;
-	max-width: 40%;
+/* SHARED ----------*/
+.pageText h4 {
+	padding-left: 25px;
 }
 
 .pageText {
+	padding: 5px 0px 0px 15px;
 	background-color: rgb(123, 170, 123);
-	padding: 10px;
-	height: 25%;
+	height: 20%;
 	border-radius: 0px 25px 0px 0px;
 	box-shadow: 12px -4px 8px rgb(155, 151, 151);
 }
@@ -148,31 +87,109 @@ Grid
 	padding: 10px;
 	height: 25%;
 	border-radius: 0px 25px 0px 0px;
-	/* box-shadow: 12px -4px 8px silver; */
 	box-shadow: 12px -4px 8px rgb(155, 151, 151);
+	box-sizing: border-box;
 }
 
-.contactGrid {
-	display: flex;
-	align-items: center;
-	/* justify-content: space-around; */
-	border: 1px solid black;
+.btn {
+	background-color: #00acb0;
+	border-radius: 4px;
+	color: #f8f8f8;
+	display: inline-block;
+	padding: 10px;
+	outline: 0;
+	cursor: pointer;
+	font-size: 1.1rem;
 }
 
-/* label {
-	grid-column: 1;
-	border: 2px solid black;
-	width: 10px;
+.btn_sizeMin {
+	min-height: 100px;
+	min-width: 150px;
 }
 
-input {
-	margin-left: 10px;
-	border: 2px solid black;
-	grid-column: 2;
-	width: 50px;
+.btn_sizeFull {
+	display: block;
+	width: 100%;
 }
 
-button {
-	grid-column: 1;
-	border: 2px solid black;
-} */
+.btn:hover {
+	background-color: #008183;
+	text-decoration: none;
+}
+
+.button {
+	background-color: green;
+	border-radius: 4px;
+	color: #f8f8f8;
+	min-height: 25px;
+	min-width: 75px;
+	outline: 0;
+	cursor: pointer;
+	font-size: 20px;
+}
+
+/* LANDING ----------*/
+.goalh2 {
+	text-decoration: underline;
+}
+
+.goal {
+	font-size: 25px;
+	font-style: oblique;
+	font-weight: bold;
+	font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+	margin: 10px 0px 0px 0px;
+	padding: 0px;
+}
+
+.searchInput {
+	min-width: 500px;
+	max-width: 800px;
+	font-size: 18px;
+}
+
+.current_regnow p {
+	font-size: 16px;
+	font-style: italic;
+	font-weight: bold;
+}
+
+/* CONTACT & ADD OFFER ----------*/
+
+.formfields > input {
+	margin-top: 20px;
+	min-height: 30px;
+	width: 400px;
+	vertical-align: top;
+	font-size: 14px;
+}
+.addformfields > input {
+	margin-top: 20px;
+	min-height: 30px;
+	width: 550px;
+	vertical-align: top;
+	font-size: 14px;
+}
+
+.addformtextbox > input {
+	margin-top: 20px;
+	min-height: 250px;
+	width: 550px;
+	max-width: 550px;
+	vertical-align: top;
+	font-size: 14px;
+	word-wrap: break-word;
+}
+
+.SubmitBtn {
+	background-color: green;
+	border-radius: 4px;
+	font-size: 18px;
+	font-weight: bold;
+	color: #f8f8f8;
+	min-height: 50px;
+	min-width: 100px;
+	outline: 0;
+	cursor: pointer;
+	margin: 20px 0px 20px 0px;
+}
