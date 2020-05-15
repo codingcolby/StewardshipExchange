@@ -148,7 +148,7 @@
 }
 
 .grid {
-	padding: 0px 5px 50px 50px;
+	padding: 0px 5px 15px 50px;
 	display: flex;
 	flex: 0 1 auto;
 
@@ -184,7 +184,7 @@
 }
 
 .datagrid {
-	padding: 0px 5%px 0px 5px;
+	padding: 0px 5px 0px 5px;
 	display: flex;
 	flex: 0 1 auto;
 	flex-direction: row;
