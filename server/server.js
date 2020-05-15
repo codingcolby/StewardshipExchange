@@ -30,7 +30,8 @@ app.use("/api/user", userRouter);
 app.use("/api/offers", offersRouter);
 app.use("/api/contact", contactRouter);
 app.use("/api/story", storyRouter);
-app.use("/api/addoffer", offersRouter);
+app.use("/api/addoffers", offersRouter);
+app.use("/api/editoffers", offersRouter);
 
 // Serve static files
 app.use(express.static("build"));

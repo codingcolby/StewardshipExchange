@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { Link } from "react-router-dom";
 import mapStoreToProps from "../../redux/mapStoreToProps";
 import "../pageview.css";
 import "../grids.css";
@@ -23,19 +24,29 @@ class LandingPage extends Component {
 		});
 	};
 
+	onLogin = (event) => {
+		this.props.history.push("/login");
+	};
+
 	render() {
 		return (
 			<div className="container">
 				<div className="pageText">
 					<h1>Welcome!</h1>
+					<h4>
+						We invite those responsible for collections care in cultural
+						heritage repositories including but not limited to: archives,
+						libraries, museums, historical societies, community documentation
+						projects, etc. to use this site as a resource to:
+					</h4>
 
 					<div className="grid">
 						<div className="grid-col grid-col_1">
 							<h2 className="goalh2">Goal 1</h2>
 							<p className="goal">
-								Reduce, Reuse <br />
-								Recycle, <br />
-								Repurpose
+								Extend the reach of your <br />
+								preservation efforts
+								<br /> for collections care
 							</p>
 						</div>
 
@@ -44,9 +55,9 @@ class LandingPage extends Component {
 						<div className="grid-col grid-col_3">
 							<h2 className="goalh2">Goal 2</h2>
 							<p className="goal">
-								Extend the reach of our <br />
-								preservation efforts
-								<br /> for collections care
+								Reduce, Reuse <br />
+								Recycle, <br />
+								Repurpose
 							</p>
 						</div>
 
@@ -65,6 +76,7 @@ class LandingPage extends Component {
 				</div>
 
 				<div className="pageText2">
+					{/* --- Add this back in when the posted offers list grows too big ---
 					<div>
 						<form>
 							<div>
@@ -89,8 +101,19 @@ class LandingPage extends Component {
 								</button>
 							</div>
 						</form>
+					</div> */}
+					<div className="current_regnow">
+						<h2>Current Offers</h2>
+						<p>
+							Looking for full offer detail and contact information? Please{" "}
+							<Link className="dk-link-button" to="/register">
+								{" "}
+								Login or Register
+							</Link>{" "}
+							- - - Registration is free!
+						</p>
 					</div>
-					<h2 className="goalh2-1">Current Offers</h2>
+
 					<table>
 						<tbody>
 							<tr>

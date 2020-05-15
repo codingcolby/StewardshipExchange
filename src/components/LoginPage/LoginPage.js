@@ -44,9 +44,10 @@ class LoginPage extends Component {
 					<p>
 						Registered users can
 						<ul>
-							<li>view the contact information for the offer</li>
-							<li>created their own offer</li>
-							<li>or successful exchange story</li>
+							<li>view the contact information for offers</li>
+							<li>add their own offer</li>
+							<li>view and manage their own offers</li>
+							<li>or add a successful exchange story (coming soon!)</li>
 						</ul>
 						Not registered yet? It is free to{" "}
 						<button
@@ -55,8 +56,9 @@ class LoginPage extends Component {
 							onClick={() => {
 								this.props.dispatch({ type: "SET_TO_REGISTER_MODE" });
 							}}>
+							{" "}
 							Register
-						</button>
+						</button>{" "}
 						!
 					</p>
 					<div>

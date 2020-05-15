@@ -16,6 +16,7 @@ class AboutPage extends Component {
 			[propertyName]: event.target.value,
 		});
 	};
+
 	render() {
 		return (
 			<div className="container">
@@ -33,9 +34,9 @@ class AboutPage extends Component {
 						sponsorship opportuntities.
 					</p>
 				</div>
-				<div className="contactus">
-					<h4>We'd love to hear from you!</h4>
 
+				<div className="contactgridcontainer">
+					<h4>We'd love to hear from you!</h4>
 					<div className="contactGrid">
 						<div>
 							<p className="contactGridLabels">Name</p>
@@ -47,7 +48,6 @@ class AboutPage extends Component {
 							<form>
 								<div className="formfields">
 									<input
-										className="contactInput"
 										type="text"
 										name="person_name"
 										value={this.state.person_name}
@@ -59,7 +59,6 @@ class AboutPage extends Component {
 
 								<div className="formfields">
 									<input
-										className="contactInput"
 										type="text"
 										name="person_contact"
 										value={this.state.person_contact}
@@ -71,7 +70,6 @@ class AboutPage extends Component {
 
 								<div className="formfields">
 									<input
-										className="contactInput"
 										type="text"
 										name="contact_msg"
 										value={this.state.contact_msg}
@@ -85,6 +83,13 @@ class AboutPage extends Component {
 									type="button"
 									className="SubmitBtn"
 									onClick={() => {
+										if (
+											this.state.person_name === "" ||
+											this.state.person_contact === "" ||
+											this.state.contact_msg === ""
+										) {
+											alert("All fields are required");
+										}
 										this.props.dispatch({
 											type: "ADD_CONTACT",
 											payload: this.state,

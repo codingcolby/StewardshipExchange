@@ -21,7 +21,8 @@ import LandingPage from "../LandingPage/LandingPage";
 import LoginPage from "../LoginPage/LoginPage";
 import RegisterPage from "../RegisterPage/RegisterPage";
 import LogOutButton from "../LogOutButton/LogOutButton";
-import AddOfferPage from "../Add_Edit_OfferPage/AddOfferPage";
+import AddOffersPage from "../Add_Edit_OfferPage/AddOffersPage";
+import EditOffersPage from "../Add_Edit_OfferPage/EditOffersPage";
 
 import "./App.css";
 
@@ -42,14 +43,11 @@ class App extends Component {
             This is a route anyone can see, no login necessary */}
 						<Route exact path="/home" component={LandingPage} />
 						<ProtectedRoute exact path="/userpage" component={UserPage} />
-						<ProtectedRoute
-							exact
-							path="/addofferpage"
-							component={AddOfferPage}
-						/>
 						<Route exact path="/works" component={HowItWorksPage} />
 						<Route exact path="/stories" component={StoriesPage} />
 						<Route exact path="/about" component={AboutPage} />
+						<Route exact path="/addoffers" component={AddOffersPage} />
+						<Route exact path="/editoffers" component={EditOffersPage} />
 						{/* For protected routes, the view could show one of several things on the same route.
             Visiting localhost:3000/user will show the UserPage if the user is logged in.
             If the user is not logged in, the ProtectedRoute will show the 'Login' or 'Register' page.
@@ -72,6 +70,7 @@ class App extends Component {
 							authRedirect="/register"
 							component={RegisterPage}
 						/>
+
 						<ProtectedRoute Linkto={LogOutButton} />
 						{/* If none of the other routes matched, we will show a 404. */}
 						<Route render={() => <h1>404</h1>} />

@@ -20,7 +20,7 @@ const Nav = (props) => {
 		<div className="nav">
 			<img src="/archivesstorage.jpg" alt="storage" />
 			<h2 className="nav-title">The Stewardship Exchange</h2>
-			<p>
+			<p className="subtitle">
 				the <em>first</em> online resource for cultural heritage agencies to
 				share surplus preservation and conservation material for collections
 				care
@@ -58,10 +58,11 @@ const Nav = (props) => {
 						{/* <Link className="nav-link" to="/info">
 							Info Page
 						</Link> */}
-						<LogOutButton className="nav-link">Log Out</LogOutButton>
+
 						<Link className="nav-link" to="/userpage">
 							{props.store.user.username}'s Page
 						</Link>
+						<LogOutButton className="logoutbtn">Log Out</LogOutButton>
 					</>
 				)}
 			</div>

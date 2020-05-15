@@ -16,8 +16,7 @@ function* getOffers(action) {
 
 function* getUsersOffers(action) {
 	try {
-		const user_id = action.payload;
-		const response = yield axios.get(`/api/offers/${user_id}`);
+		const response = yield axios.get("/api/offers");
 		yield put({
 			type: "SHOW_USERSOFFERS",
 			payload: response.data,
@@ -29,7 +28,7 @@ function* getUsersOffers(action) {
 
 function* addOffers(action) {
 	try {
-		yield axios.post(`/api/offers`, action.payload);
+		yield axios.post("/api/addoffers", action.payload);
 		yield put({
 			type: "SHOW_OFFERS",
 		});

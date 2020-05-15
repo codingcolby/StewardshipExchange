@@ -21,34 +21,29 @@ router.get("/", (req, res) => {
 router.post("/", (req, res) => {
 	const newOffersData = req.body;
 	const queryText = `INSERT INTO "offers" (
-        "submitting_user_id",
+  
         "agency",
         "contact_name",
         "contact_email",
         "ten_digit_dash_phone1",
-        "phone1_ext",
         "ship_options",
         "state",
         "city",
         "off_cat",
-        "off_detail",
-				"offer_status")
-				VALUES ($1,$2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12);`;
+        "off_detail")
+				VALUES ($1,$2, $3, $4, $5, $6, $7, $8, $9);`;
 
 	pool
 		.query(queryText, [
-			newOffersData.submitting_user_id,
 			newOffersData.agency,
 			newOffersData.contact_name,
 			newOffersData.contact_email,
 			newOffersData.ten_digit_dash_phone1,
-			newOffersData.phone1_ext,
 			newOffersData.ship_options,
 			newOffersData.state,
 			newOffersData.city,
 			newOffersData.off_cat,
 			newOffersData.off_detail,
-			newOffersData.offer_status,
 		])
 		.then((responseDb) => {
 			res.sendStatus(201);
