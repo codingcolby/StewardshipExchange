@@ -21,6 +21,7 @@ import LandingPage from "../LandingPage/LandingPage";
 import LoginPage from "../LoginPage/LoginPage";
 import RegisterPage from "../RegisterPage/RegisterPage";
 import LogOutButton from "../LogOutButton/LogOutButton";
+import AddOfferPage from "../Add_Edit_OfferPage/AddOfferPage";
 
 import "./App.css";
 
@@ -41,6 +42,11 @@ class App extends Component {
             This is a route anyone can see, no login necessary */}
 						<Route exact path="/home" component={LandingPage} />
 						<ProtectedRoute exact path="/userpage" component={UserPage} />
+						<ProtectedRoute
+							exact
+							path="/addofferpage"
+							component={AddOfferPage}
+						/>
 						<Route exact path="/works" component={HowItWorksPage} />
 						<Route exact path="/stories" component={StoriesPage} />
 						<Route exact path="/about" component={AboutPage} />
