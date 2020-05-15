@@ -27,26 +27,39 @@ class LandingPage extends Component {
 		return (
 			<div className="container">
 				<div className="pageText">
-					<h2>Welcome!</h2>
+					<h1>Welcome!</h1>
 
 					<div className="grid">
 						<div className="grid-col grid-col_1">
-							<h2>Goal 1</h2>
-							<p>Some text goes here</p>
+							<h2 className="goalh2">Goal 1</h2>
+							<p className="goal">
+								Reduce, Reuse <br />
+								Recycle, <br />
+								Repurpose
+							</p>
 						</div>
 
 						<div className="grid-col grid-col_2"></div>
 
 						<div className="grid-col grid-col_3">
-							<h2>Goal 2</h2>
-							<p>Some text goes here</p>
+							<h2 className="goalh2">Goal 2</h2>
+							<p className="goal">
+								Extend the reach of our <br />
+								preservation efforts
+								<br /> for collections care
+							</p>
 						</div>
 
 						<div className="grid-col grid-col_4"></div>
 
 						<div className="grid-col grid-col_5">
-							<h2>Goal 3</h2>
-							<p>Some text goes here</p>
+							<h2 className="goalh2">Goal 3</h2>
+							<p className="goal">
+								Foster community <br />
+								and connection across
+								<br />
+								cultural heritage agencies
+							</p>
 						</div>
 					</div>
 				</div>
@@ -77,10 +90,8 @@ class LandingPage extends Component {
 							</div>
 						</form>
 					</div>
+					<h2 className="goalh2-1">Current Offers</h2>
 					<table>
-						<thead>
-							<h3>Current Offers</h3>
-						</thead>
 						<tbody>
 							<tr>
 								<th>Status</th>
