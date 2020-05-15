@@ -1,25 +1,18 @@
 .nav-title {
-	/* font-size: 24px;
-    font-weight: 700;
-    display: inline-block;
-    color: #f2f2f2;
-		padding-left: 10px; */
-
 	font-size: 40px;
 	font-weight: 700;
 	font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
 		"Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 	display: inline-block;
 	color: black;
-	padding-top: 20px;
+	padding-top: 10px;
+	margin-top: 5px;
 	margin-bottom: 5px;
 	vertical-align: top;
 	text-shadow: 3px 4px 6px rgb(85, 128, 104);
 }
 
 .nav {
-	/* overflow: hidden;
-	background-color: #00acb0; */
 	height: auto;
 	width: auto;
 	padding: 0px 0px 6px 30px;
@@ -29,10 +22,10 @@
 
 img {
 	height: 158px;
-	/* height: 137px; */
+
 	max-width: 216px;
 	float: right;
-	/* overflow-anchor: 0; */
+
 	margin-left: 75px;
 	box-shadow: -4px 4px 8px silver;
 }
@@ -43,20 +36,6 @@ p {
 }
 
 .nav-link {
-	/* float: left;
-	color: #f2f2f2;
-	background-color: #00acb0;
-	text-align: center;
-	padding: 24px 10px;
-	text-decoration: none;
-	font-size: 15px; */
-
-	/* these last two make the logout button in
-  the nav bar look like another link */
-	/* border: none;
-	cursor: pointer;
-  outline: 0; */
-
 	width: 75px;
 	height: 30px;
 	text-align: center;
@@ -71,7 +50,7 @@ p {
 	text-decoration-color: rgb(13, 75, 13);
 }
 
-LogOutButton {
+LogOutButton .nav-link {
 	width: 75px;
 	height: 30px;
 	text-align: center;
@@ -97,11 +76,3 @@ LogOutButton {
 	border-radius: 0px 15px 0px 0px;
 	background-color: silver;
 }
-
-/* .nav-link:hover {
-	background-color: #008183;
-}
-
-.nav-right {
-	float: right;
-} */
