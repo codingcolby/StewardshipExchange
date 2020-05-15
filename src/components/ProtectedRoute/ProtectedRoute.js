@@ -4,7 +4,6 @@ import { connect } from "react-redux";
 import LoginPage from "../LoginPage/LoginPage";
 import RegisterPage from "../RegisterPage/RegisterPage";
 import mapStoreToProps from "../../redux/mapStoreToProps";
-import UserPage from "../UserPage/UserPage";
 
 // A Custom Wrapper Component -- This will keep our code DRY.
 // Responsible for watching redux state, and returning an appropriate component
