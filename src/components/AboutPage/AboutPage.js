@@ -4,12 +4,6 @@ import mapStoreToProps from "../../redux/mapStoreToProps";
 import "../pageview.css";
 import "../grids.css";
 
-// This is one of our simplest components
-// It doesn't have local state, so it can be a function component.
-// It doesn't dispatch any redux actions or display any part of redux state
-// or even care what the redux state is, so it doesn't need 'connect()'
-
-// const AboutPage = () => (
 class AboutPage extends Component {
 	state = {
 		person_name: "",
@@ -89,7 +83,7 @@ class AboutPage extends Component {
 
 								<button
 									type="button"
-									className="contactSubmitBtn"
+									className="SubmitBtn"
 									onClick={() => {
 										this.props.dispatch({
 											type: "ADD_CONTACT",
