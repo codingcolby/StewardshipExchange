@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
-// import LogOutButton from "../LogOutButton/LogOutButton";
+import LogOutButton from "../LogOutButton/LogOutButton";
 import "./Nav.css";
 import mapStoreToProps from "../../redux/mapStoreToProps";
 
@@ -44,22 +44,24 @@ const Nav = (props) => {
 				{/* <Link className="nav-link" to="/about">
 					About
 				</Link> */}
-				<Link className="nav-link" to={loginLinkData.path}>
-					{/* Show this link if they are logged in or not,
+				{props.store.user.id == null && (
+					<Link className="nav-link" to={loginLinkData.path}>
+						{/* Show this link if they are logged in or not,
           but call this link 'Home' if they are logged in,
           and call this link 'Login / Register' if they are not */}
-					{loginLinkData.text}
-				</Link>
+						{loginLinkData.text}
+					</Link>
+				)}
 				{/* Show the link to the info page and the logout button if the user is logged in */}
 				{props.store.user.id && (
 					<>
 						{/* <Link className="nav-link" to="/info">
 							Info Page
 						</Link> */}
+						<LogOutButton className="nav-link">Log Out</LogOutButton>
 						<Link className="nav-link" to="/userpage">
 							{props.store.user.username}'s Page
 						</Link>
-						{/* <LogOutButton className="nav-link">Log Out</LogOutButton> */}
 					</>
 				)}
 			</div>
