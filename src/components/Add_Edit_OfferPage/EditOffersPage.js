@@ -156,6 +156,17 @@ class EditOffersPage extends Component {
 								/>
 							</div>
 
+							<div className="addformtextbox">
+								<input
+									type="text"
+									name="edit_date"
+									value={this.state.edit_date}
+									onChange={this.handleInputChangeFor("edit_date")}
+									required
+									default={Date()}
+								/>
+							</div>
+
 							<button
 								type="button"
 								className="SubmitBtn"
@@ -170,7 +181,8 @@ class EditOffersPage extends Component {
 										this.state.city === "" ||
 										this.state.off_cat === "" ||
 										this.state.off_status === "" ||
-										this.state.off_detail === ""
+										this.state.off_detail === "" ||
+										this.state.edit_date === ""
 									) {
 										alert("All fields are required");
 									}
@@ -180,7 +192,7 @@ class EditOffersPage extends Component {
 										payload: this.state,
 									});
 								}}>
-								Submit
+								Update Offer
 							</button>
 						</form>
 					</div>

@@ -71,25 +71,27 @@ router.put("/", (req, res) => {
 			"off_cat" = $11,
 			"off_detail" = $12,
 			"offer_status" = $13
+			"edit_date" = $14
 			WHERE "offer_id" = $1;`;
 
-	const newOffersData = req.body;
+	const editOffersData = req.body;
 
 	pool
 		.query(queryText, [
-			newOffersData.offer_id,
-			newOffersData.submitting_user_id,
-			newOffersData.agency,
-			newOffersData.contact_name,
-			newOffersData.contact_email,
-			newOffersData.ten_digit_dash_phone1,
-			newOffersData.phone1_ext,
-			newOffersData.ship_options,
-			newOffersData.state,
-			newOffersData.city,
-			newOffersData.off_cat,
-			newOffersData.off_detail,
-			newOffersData.offer_status,
+			editOffersData.offer_id,
+			editOffersData.submitting_user_id,
+			editOffersData.agency,
+			editOffersData.contact_name,
+			editOffersData.contact_email,
+			editOffersData.ten_digit_dash_phone1,
+			editOffersData.phone1_ext,
+			editOffersData.ship_options,
+			editOffersData.state,
+			editOffersData.city,
+			editOffersData.off_cat,
+			editOffersData.off_detail,
+			editOffersData.offer_status,
+			editOffersData.edit_date,
 		])
 		.then((responseDb) => {
 			res.sendStatus(200);

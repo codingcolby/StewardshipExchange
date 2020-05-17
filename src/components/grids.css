@@ -114,14 +114,11 @@
 	padding: 0px 5px 15px 50px;
 	display: flex;
 	flex: 0 1 auto;
-
 	flex-direction: row;
 	flex-wrap: wrap;
-
 	justify-content: flex-start;
 	align-items: flex-start;
 	text-align: center;
-
 	grid-column-gap: 10px;
 }
 

@@ -97,13 +97,15 @@ class UserPage extends Component {
 								{this.props.store.offersReducer.map((item, index) => (
 									<tr key={`index-${index}`}>
 										<td className="status">{item.offer_status}</td>
-										<td className="date">{item.submit_date}</td>
+										<td className="date">
+											dateFormat({item.submit_date}, "dd mmm yyyy")
+										</td>
 										<td className="location">
 											{item.city}, {item.state}
 										</td>
 										<td className="description">{item.off_detail}</td>
-										<td className="date">
-											{" "}
+										<td className="date">{item.submit_date}</td>
+										<td>
 											<Link to="/editoffer">
 												Edit, Update Status, or Delete an Offer
 											</Link>
