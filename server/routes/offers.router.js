@@ -17,6 +17,22 @@ router.get("/", (req, res) => {
 		});
 });
 
+// ----- GET ALL OFFERS BY USER
+router.get("/userpage/7", (req, res) => {
+	const queryText = `SELECT * FROM "offers" WHERE "submitting_user_id" = 7 ORDER BY "submit_date" DESC;`;
+	// const userId = req.params.id;
+
+	pool
+		.query(queryText)
+		.then((responseDb) => {
+			res.send(responseDb.rows);
+		})
+		.catch((err) => {
+			console.warn(err);
+			res.sendStatus(500);
+		});
+});
+
 // ----- POST NEW OFFER
 router.post("/", (req, res) => {
 	const newOffersData = req.body;
@@ -103,7 +119,7 @@ router.put("/", (req, res) => {
 });
 
 // ----- DELETE OFFER
-router.delete("/:id", (req, res) => {
+router.delete("/:offer_id", (req, res) => {
 	const offerId = req.params.id;
 	const queryString = `DELETE FROM "offers" WHERE "offer_id" = $1;`;
 	pool
