@@ -33,16 +33,16 @@ class LandingPage extends Component {
 			<div className="container">
 				<div className="pageText">
 					<h1>Welcome!</h1>
-					<h4>
+					<p className="intro">
 						We invite those responsible for collections care in cultural
-						heritage repositories including but not limited to: archives,
-						libraries, museums, historical societies, community documentation
-						projects, etc. to use this site as a resource to:
-					</h4>
+						heritage repositories including but not limited to: <br />
+						archives, libraries, museums, historical societies, community
+						documentation projects, etc. to use this site as a resource to:
+					</p>
 
 					<div className="grid">
 						<div className="grid-col grid-col_1">
-							<h2 className="goalh2">Goal 1</h2>
+							{/* <h2 className="goalh2">Goal 1</h2> */}
 							<p className="goal">
 								Extend the reach of your <br />
 								preservation efforts
@@ -53,7 +53,7 @@ class LandingPage extends Component {
 						<div className="grid-col grid-col_2"></div>
 
 						<div className="grid-col grid-col_3">
-							<h2 className="goalh2">Goal 2</h2>
+							{/* <h2 className="goalh2">Goal 2</h2> */}
 							<p className="goal">
 								Reduce, Reuse <br />
 								Recycle, <br />
@@ -64,7 +64,7 @@ class LandingPage extends Component {
 						<div className="grid-col grid-col_4"></div>
 
 						<div className="grid-col grid-col_5">
-							<h2 className="goalh2">Goal 3</h2>
+							{/* <h2 className="goalh2">Goal 3</h2> */}
 							<p className="goal">
 								Foster community <br />
 								and connection across
@@ -124,7 +124,7 @@ class LandingPage extends Component {
 							</tr>
 							{this.props.store.offersReducer.map((item, index) => (
 								<tr key={`index-${index}`}>
-									<td className="status">{item.offer_status}</td>
+									<td className="status"> {item.offer_status}</td>
 									<td className="date">{item.submit_date}</td>
 									<td className="location">
 										{item.city}, {item.state}

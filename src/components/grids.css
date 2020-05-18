@@ -33,13 +33,6 @@
 
 /* ADD OFFER ----------*/
 
-.addgridcontainer {
-	padding-left: 25px;
-	margin-bottom: 5px;
-	display: grid;
-	grid-template-columns: 250px 800px;
-}
-
 .addGrid {
 	margin-left: 150px;
 	display: grid;
@@ -56,6 +49,7 @@
 	border-top: 1px solid black;
 	border-bottom: 1px solid black;
 	box-shadow: 12px -4px 8px rgb(155, 151, 151);
+	vertical-align: top;
 }
 .addGridLabels {
 	margin: 30px 0px 0px 10px;
@@ -68,18 +62,8 @@
 /* UNIVERSAL ----------*/
 
 /* DATA ----------*/
-.datagrid {
-	margin-top: 10px;
-	padding: 0px 5%px 0px 5px;
-	display: flex;
-	flex: 0 1 auto;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: flex-start;
-	align-items: flex-start;
-	grid-column-gap: 10px;
-}
 
+/* REMOVE?
 .datagrid-col {
 	flex: 0 0 auto;
 	padding: 0 0.5rem 0.5rem;
@@ -88,7 +72,7 @@
 	grid-column-gap: 10px;
 	border-radius: 5px;
 	border-bottom: 1px solid black;
-}
+}  
 
 .datagrid-col_1 {
 	flex-basis: 20%;
@@ -108,7 +92,7 @@
 .datagrid-col_4 {
 	flex-basis: 40%;
 	max-width: 40%;
-}
+} */
 
 .grid {
 	padding: 0px 5px 15px 50px;
@@ -129,20 +113,33 @@
 }
 
 .grid-col_1 {
-	flex-basis: 30%;
+	/* flex-basis: 30%; */
+	margin: 0px 75px 0px 100px;
 	max-width: 30%;
+	border-radius: 5px;
+	border-right: 1px solid black;
+	border-left: 1px solid black;
 }
 
 .grid-col_3 {
-	flex-basis: 30%;
+	/* flex-basis: 30%; */
+	margin: 0px 75px 0px 75px;
 	max-width: 30%;
+	border-radius: 5px;
+	border-right: 1px solid black;
+	border-left: 1px solid black;
 }
 
 .grid-col_5 {
-	flex-basis: 30%;
+	/* flex-basis: 30%; */
+	margin: 0px 100px 0px 75px;
 	max-width: 30%;
+	border-radius: 5px;
+	border-right: 1px solid black;
+	border-left: 1px solid black;
 }
 
+/*  REMOVE
 .datagrid {
 	padding: 0px 5px 0px 5px;
 	display: flex;
@@ -171,6 +168,7 @@
 .datagrid-row_1 {
 	max-height: auto;
 }
+ 
 
 .serverData {
 	border-radius: 5px;
@@ -191,11 +189,12 @@
 	flex-basis: 55%;
 	max-width: 55%;
 }
+*/
+
 /* STORY ----------*/
 
 .storygrid {
 	padding: 0px 5px 0px 5px;
-
 	display: flex;
 	flex: 0 1 auto;
 	flex-direction: row;

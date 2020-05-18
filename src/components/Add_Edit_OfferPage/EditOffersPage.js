@@ -6,7 +6,6 @@ import "../grids.css";
 
 class EditOffersPage extends Component {
 	state = {
-		//submitting_user_id: "",
 		agency: "",
 		contact_name: "",
 		contact_email: "",
@@ -27,7 +26,7 @@ class EditOffersPage extends Component {
 	render() {
 		return (
 			<div className="container">
-				<h2>Add an Offer Page</h2>
+				<h2>Edit an Offer for toUpperCase{this.props.store.user.username}</h2>
 				<div className="addGrid">
 					<div>
 						<p className="addGridLabels">Offering Agency</p>

@@ -1,7 +1,7 @@
 const contactReducer = (state = {}, action) => {
 	switch (action.type) {
-		case "SHOW_CONTACT":
-			return action.payload;
+		case "CLEAR_CONTACT":
+			return "";
 		default:
 			return state;
 	}
