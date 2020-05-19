@@ -104,7 +104,7 @@ class UserPage extends Component {
 										</td>
 										<td className="description">{item.off_detail}</td>
 										<td className="manage">
-											<Link to="/editoffer">Edit/Update/Delete</Link>
+											<Link to="/editoffers">Edit/Update/Delete</Link>
 										</td>
 									</tr>
 								))}

@@ -38,6 +38,12 @@ tr {
 	vertical-align: top;
 }
 
+hr {
+	color: rgb(31, 88, 31);
+	width: 75%;
+	padding-right: 80px;
+}
+
 .question {
 	font-weight: bold;
 }
@@ -57,43 +63,50 @@ tr {
 }
 
 .status {
-	width: 200px;
-	border-bottom: 1px solid black;
-	border-radius: 5px;
+	width: 150px;
+	border-bottom: 2px solid black;
+	border-radius: 10px;
 	padding: 10px 0px 0px 10px;
 }
 
 .newstatus {
 	width: 200px;
-	border-bottom: 1px solid black;
-	border-radius: 5px;
+	border-bottom: 2px solid black;
+	border-radius: 10px;
 	padding: 10px 0px 0px 10px;
 	color: red;
 }
 
+.categories {
+	width: 150px;
+	border-bottom: 2px solid black;
+	border-radius: 10px;
+	padding: 10px 0px 0px 10px;
+}
+
 .date {
 	width: 150px;
-	border-bottom: 1px solid black;
-	border-radius: 5px;
+	border-bottom: 2px solid black;
+	border-radius: 10px;
 	padding: 10px 0px 0px 10px;
 }
 
 .location {
-	width: 250px;
-	border-bottom: 1px solid black;
-	border-radius: 5px;
+	width: 125px;
+	border-bottom: 2px solid black;
+	border-radius: 10px;
 	padding: 10px 0px 0px 10px;
 }
 
 .description {
 	width: 650px;
-	border-bottom: 1px solid black;
-	border-radius: 5px;
+	border-bottom: 2px solid black;
+	border-radius: 10px;
 	padding: 10px 0px 15px 10px;
 }
 .manage {
 	width: 150px;
-	border-bottom: 1px solid black;
+	border-bottom: 2px solid black;
 	border-radius: 5px;
 	padding: 10px 0px 15px 10px;
 }
@@ -120,6 +133,15 @@ tr {
 	border-radius: 0px 25px 0px 0px;
 	box-shadow: 12px -4px 8px rgb(155, 151, 151);
 	box-sizing: border-box;
+}
+
+.fullextraslabel {
+	font-weight: bold;
+}
+
+.fullextras {
+	font-weight: bold;
+	color: darkgreen;
 }
 
 .btn {

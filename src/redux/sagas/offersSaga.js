@@ -68,6 +68,7 @@ function* offersSaga() {
 	yield takeLatest("ADD_OFFERS", addOffers);
 	yield takeLatest("EDIT_OFFERS", editOffers);
 	yield takeLatest("REMOVE_OFFERS", removeOffers);
+	yield takeLatest("GET_FULLOFFERS", getOffers);
 }
 
 export default offersSaga;
