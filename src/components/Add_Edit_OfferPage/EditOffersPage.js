@@ -6,7 +6,6 @@ import "../grids.css";
 
 class EditOffersPage extends Component {
 	state = {
-		//submitting_user_id: "",
 		agency: "",
 		contact_name: "",
 		contact_email: "",
@@ -27,7 +26,7 @@ class EditOffersPage extends Component {
 	render() {
 		return (
 			<div className="container">
-				<h2>Add an Offer Page</h2>
+				<h2>Edit an Offer for {this.props.store.user.username}</h2>
 				<div className="addGrid">
 					<div>
 						<p className="addGridLabels">Offering Agency</p>
@@ -38,6 +37,7 @@ class EditOffersPage extends Component {
 						<p className="addGridLabels">State</p>
 						<p className="addGridLabels">City</p>
 						<p className="addGridLabels">Offer Status</p>
+						<p className="addGridLabels">Revision Date</p>
 						<p className="addGridLabels">Item Categories</p>
 
 						<div></div>
@@ -126,22 +126,31 @@ class EditOffersPage extends Component {
 							<div className="addformfields">
 								<input
 									type="text"
-									name="off_cat"
-									value={this.state.off_cat}
-									onChange={this.handleInputChangeFor("off_cat")}
+									name="off_status"
+									value={this.state.off_status}
+									onChange={this.handleInputChangeFor("off_status")}
 									required
-									placeholder="Enclosures, Supplies, Tools, Equipment, Furnishings (Storage/Display/General)"
+									placeholder="Pending, Revised, Claimed!, Completed"
 								/>
 							</div>
 
 							<div className="addformfields">
 								<input
 									type="text"
-									name="off_status"
-									value={this.state.off_status}
-									onChange={this.handleInputChangeFor("off_status")}
+									name="edit_date"
+									onChange={this.handleInputChangeFor("edit_date")}
 									required
-									placeholder="Pending, Revised, Claimed!, Completed"
+								/>
+							</div>
+
+							<div className="addformfields">
+								<input
+									type="text"
+									name="off_cat"
+									value={this.state.off_cat}
+									onChange={this.handleInputChangeFor("off_cat")}
+									required
+									placeholder="Enclosures, Supplies, Tools, Equipment, Furnishings (Storage/Display/General)"
 								/>
 							</div>
 
@@ -170,7 +179,8 @@ class EditOffersPage extends Component {
 										this.state.city === "" ||
 										this.state.off_cat === "" ||
 										this.state.off_status === "" ||
-										this.state.off_detail === ""
+										this.state.off_detail === "" ||
+										this.state.edit_date === ""
 									) {
 										alert("All fields are required");
 									}
@@ -180,7 +190,34 @@ class EditOffersPage extends Component {
 										payload: this.state,
 									});
 								}}>
-								Submit
+								Update Offer
+							</button>
+							<button
+								type="button"
+								className="SubmitBtn"
+								onClick={() => {
+									if (
+										this.state.agency === "" ||
+										this.state.contact_name === "" ||
+										this.state.contact_email === "" ||
+										this.state.ten_digit_dash_phone1 === "" ||
+										this.state.ship_options === "" ||
+										this.state.state === "" ||
+										this.state.city === "" ||
+										this.state.off_cat === "" ||
+										this.state.off_status === "" ||
+										this.state.off_detail === "" ||
+										this.state.edit_date === ""
+									) {
+										alert("All fields are required");
+									}
+
+									this.props.dispatch({
+										type: "DELETE_OFFER",
+										payload: this.state,
+									});
+								}}>
+								Delete Offer
 							</button>
 						</form>
 					</div>

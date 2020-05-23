@@ -16,7 +16,7 @@ function* getOffers(action) {
 
 function* getUsersOffers(action) {
 	try {
-		const response = yield axios.get("/api/offers");
+		const response = yield axios.get(`/api/offers/userpage/7`);
 		yield put({
 			type: "SHOW_USERSOFFERS",
 			payload: response.data,
@@ -30,7 +30,7 @@ function* addOffers(action) {
 	try {
 		yield axios.post("/api/addoffers", action.payload);
 		yield put({
-			type: "SHOW_OFFERS",
+			type: "CLEAR_OFFERS",
 		});
 	} catch (error) {
 		console.log("addOffers request failed", error);
@@ -68,6 +68,7 @@ function* offersSaga() {
 	yield takeLatest("ADD_OFFERS", addOffers);
 	yield takeLatest("EDIT_OFFERS", editOffers);
 	yield takeLatest("REMOVE_OFFERS", removeOffers);
+	yield takeLatest("GET_FULLOFFERS", getOffers);
 }
 
 export default offersSaga;

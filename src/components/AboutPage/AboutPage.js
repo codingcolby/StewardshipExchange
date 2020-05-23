@@ -50,7 +50,6 @@ class AboutPage extends Component {
 									<input
 										type="text"
 										name="person_name"
-										value={this.state.person_name}
 										onChange={this.handleInputChangeFor("person_name")}
 										required
 										placeholder="required"
@@ -61,7 +60,6 @@ class AboutPage extends Component {
 									<input
 										type="text"
 										name="person_contact"
-										value={this.state.person_contact}
 										onChange={this.handleInputChangeFor("person_contact")}
 										required
 										placeholder="required"
@@ -71,8 +69,7 @@ class AboutPage extends Component {
 								<div className="formfields">
 									<input
 										type="text"
-										name="contact_msg"
-										value={this.state.contact_msg}
+										name="contact_msg_input"
 										onChange={this.handleInputChangeFor("contact_msg")}
 										required
 										placeholder="required"
