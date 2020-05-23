@@ -6,7 +6,7 @@ import "../grids.css";
 
 class AddOffersPage extends Component {
 	state = {
-		//submitting_user_id: "",
+		submitting_user_id: `${this.props.store.user.id}`,
 		agency: "",
 		contact_name: "",
 		contact_email: "",
@@ -23,10 +23,11 @@ class AddOffersPage extends Component {
 			[propertyName]: event.target.value,
 		});
 	};
+
 	render() {
 		return (
 			<div className="container">
-				<h2>Add an Offer Page</h2>
+				<h2>Add an Offer for {this.props.store.user.username}</h2>
 				<div className="addGrid">
 					<div>
 						<p className="addGridLabels">Offering Agency</p>
@@ -48,7 +49,6 @@ class AddOffersPage extends Component {
 								<input
 									type="text"
 									name="agency"
-									value={this.state.agency}
 									onChange={this.handleInputChangeFor("agency")}
 									required
 									placeholder="required - your organization's name"
@@ -59,7 +59,6 @@ class AddOffersPage extends Component {
 								<input
 									type="text"
 									name="contact_name"
-									value={this.state.contact_name}
 									onChange={this.handleInputChangeFor("contact_name")}
 									required
 									placeholder="required - this can be someone other than you"
@@ -70,7 +69,6 @@ class AddOffersPage extends Component {
 								<input
 									type="text"
 									name="contact_email"
-									value={this.state.contact_email}
 									onChange={this.handleInputChangeFor("contact_email")}
 									required
 									placeholder="required - should be for the person above"
@@ -81,7 +79,6 @@ class AddOffersPage extends Component {
 								<input
 									type="text"
 									name="ten_digit_dash_phone1"
-									value={this.state.ten_digit_dash_phone1}
 									onChange={this.handleInputChangeFor("ten_digit_dash_phone1")}
 									required
 									placeholder="required - should be for the person above"
@@ -92,7 +89,6 @@ class AddOffersPage extends Component {
 								<input
 									type="text"
 									name="ship_options"
-									value={this.state.ship_options}
 									onChange={this.handleInputChangeFor("ship_options")}
 									required
 									placeholder="Pick-up, Deliver, Meet, Ship, Negotiable"
@@ -103,7 +99,6 @@ class AddOffersPage extends Component {
 								<input
 									type="text"
 									name="state"
-									value={this.state.state}
 									onChange={this.handleInputChangeFor("state")}
 									required
 									placeholder="required and limited to TWO LETTER ABBREVIATION - example: MO for Missouri"
@@ -114,7 +109,6 @@ class AddOffersPage extends Component {
 								<input
 									type="text"
 									name="city"
-									value={this.state.city}
 									onChange={this.handleInputChangeFor("city")}
 									required
 									placeholder="required"
@@ -125,7 +119,6 @@ class AddOffersPage extends Component {
 								<input
 									type="text"
 									name="off_cat"
-									value={this.state.off_cat}
 									onChange={this.handleInputChangeFor("off_cat")}
 									required
 									placeholder="Enclosures, Supplies, Tools, Equipment, Furnishings (Storage/Display/General)"
@@ -134,12 +127,11 @@ class AddOffersPage extends Component {
 
 							<div className="addformtextbox">
 								<input
-									type="text"
+									type="textbox"
 									name="off_detail"
-									value={this.state.off_detail}
 									onChange={this.handleInputChangeFor("off_detail")}
 									required
-									placeholder="Please describe what you are offering including quantity, quality, model or part number if knwon etc. "
+									placeholder="Please describe what you are offering including quantity, quality, model or part number if known etc. "
 								/>
 							</div>
 
@@ -168,6 +160,23 @@ class AddOffersPage extends Component {
 								}}>
 								Submit
 							</button>
+							{/* <button
+								type="button"
+								className="SubmitBtn"
+								name="clearform"
+								onClick={() => {
+									(this.agency.value = ""),
+										this.state.contact_name.value(),
+										this.state.contact_email.value(),
+										this.state.ten_digit_dash_phone1.value(),
+										this.state.ship_options.value(),
+										this.state.state.value(),
+										this.state.city.value(),
+										this.state.off_cat.value(),
+										this.state.off_detail.value();
+								}}>
+								Clear Form / Add Another Offer
+							</button> */}
 						</form>
 					</div>
 				</div>

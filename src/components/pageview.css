@@ -28,12 +28,30 @@ h4 {
 
 th {
 	text-align: left;
+	padding: 10px 0px 10px 5px;
+	background-color: rgb(123, 170, 123);
 }
 
 tr {
-	height: 35px;
 	border-bottom: 1px solid black;
 	border-radius: 5px;
+	vertical-align: top;
+}
+
+hr {
+	color: rgb(31, 88, 31);
+	width: 75%;
+	padding-right: 80px;
+}
+
+.question {
+	font-weight: bold;
+}
+
+.disclaimer {
+	padding: 0px 50px 10px 50px;
+	text-align: justify;
+	font-size: x-small;
 }
 
 .useroptions {
@@ -46,35 +64,61 @@ tr {
 
 .status {
 	width: 150px;
-	border-bottom: 1px solid black;
-	border-radius: 5px;
+	border-bottom: 2px solid black;
+	border-radius: 10px;
+	padding: 10px 0px 0px 10px;
+}
+
+.newstatus {
+	width: 200px;
+	border-bottom: 2px solid black;
+	border-radius: 10px;
+	padding: 10px 0px 0px 10px;
+	color: red;
+}
+
+.categories {
+	width: 150px;
+	border-bottom: 2px solid black;
+	border-radius: 10px;
+	padding: 10px 0px 0px 10px;
 }
 
 .date {
-	width: 400px;
-	border-bottom: 1px solid black;
-	border-radius: 5px;
+	width: 150px;
+	border-bottom: 2px solid black;
+	border-radius: 10px;
+	padding: 10px 0px 0px 10px;
 }
 
 .location {
-	width: 250px;
-	border-bottom: 1px solid black;
-	border-radius: 5px;
+	width: 125px;
+	border-bottom: 2px solid black;
+	border-radius: 10px;
+	padding: 10px 0px 0px 10px;
 }
 
 .description {
-	width: 800px;
-	border-bottom: 1px solid black;
+	width: 650px;
+	border-bottom: 2px solid black;
+	border-radius: 10px;
+	padding: 10px 0px 15px 10px;
+}
+.manage {
+	width: 150px;
+	border-bottom: 2px solid black;
 	border-radius: 5px;
+	padding: 10px 0px 15px 10px;
 }
 
 /* SHARED ----------*/
-.pageText h4 {
+.intro {
 	padding-left: 25px;
+	font-size: 16px;
 }
 
 .pageText {
-	padding: 5px 0px 0px 15px;
+	padding: 5px 20px 0px 15px;
 	background-color: rgb(123, 170, 123);
 	height: 20%;
 	border-radius: 0px 25px 0px 0px;
@@ -89,6 +133,15 @@ tr {
 	border-radius: 0px 25px 0px 0px;
 	box-shadow: 12px -4px 8px rgb(155, 151, 151);
 	box-sizing: border-box;
+}
+
+.fullextraslabel {
+	font-weight: bold;
+}
+
+.fullextras {
+	font-weight: bold;
+	color: darkgreen;
 }
 
 .btn {
@@ -134,11 +187,11 @@ tr {
 }
 
 .goal {
-	font-size: 25px;
+	font-size: 20px;
 	font-style: oblique;
 	font-weight: bold;
 	font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-	margin: 10px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
 	padding: 0px;
 }
 
@@ -170,15 +223,13 @@ tr {
 	vertical-align: top;
 	font-size: 14px;
 }
-
 .addformtextbox > input {
+	vertical-align: top;
 	margin-top: 20px;
 	min-height: 250px;
 	width: 550px;
-	max-width: 550px;
-	vertical-align: top;
 	font-size: 14px;
-	word-wrap: break-word;
+	word-wrap: auto;
 }
 
 .SubmitBtn {

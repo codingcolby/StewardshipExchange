@@ -11,13 +11,13 @@ class UserPage extends Component {
 		searchterm: "",
 	};
 
-	// componentDidMount() {
-	// 	// load up all information from the server
-	// 	this.props.dispatch({
-	// 		type: "GET_USERSOFFERS",
-	// 		payload: this.user,
-	// 	});
-	// }
+	componentDidMount() {
+		// load up all information from the server
+		this.props.dispatch({
+			type: "GET_USERSOFFERS",
+			payload: this.props.store.user.id,
+		});
+	}
 
 	handleSearchTerm = (propertyName) => (event) => {
 		this.setState({
@@ -33,7 +33,7 @@ class UserPage extends Component {
 		return (
 			<div className="container">
 				<div>
-					<h1 id="welcome">Welcome, {this.props.store.user.username}!</h1>
+					<h1 id="welcome">Welcome {this.props.store.user.username}!</h1>
 					<p></p>
 					{/* <p>Your ID is: {this.props.store.user.id}</p> */}
 				</div>
@@ -93,20 +93,18 @@ class UserPage extends Component {
 									<th>Date Posted</th>
 									<th>Location</th>
 									<th>Items Offered</th>
+									<th>Manage</th>
 								</tr>
 								{this.props.store.offersReducer.map((item, index) => (
 									<tr key={`index-${index}`}>
-										<td className="status">{item.offer_status}</td>
+										<td className="status"> {item.offer_status}</td>
 										<td className="date">{item.submit_date}</td>
 										<td className="location">
 											{item.city}, {item.state}
 										</td>
 										<td className="description">{item.off_detail}</td>
-										<td className="date">
-											{" "}
-											<Link to="/editoffer">
-												Edit, Update Status, or Delete an Offer
-											</Link>
+										<td className="manage">
+											<Link to="/editoffers">Edit/Update/Delete</Link>
 										</td>
 									</tr>
 								))}
