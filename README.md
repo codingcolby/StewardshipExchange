@@ -11,13 +11,13 @@ To see the fully functional site, please visit: DEPLOYED VERSION OF THE APP
 ## Screen Shots
 
 The main page introduces the concept and previews current surplus offers
-![Main Page](documentation/images/MainPage.png)
+![Main Page](documentation/images/MainPagesm.png)
 
-Once registered, after Login the user has their own Home Page
-![User's Home Page](documentation/images/RegisteredUserPage.png)
+Logged in users have their own Home Page
+![User's Home Page](documentation/images/RegisteredUserPagesm.png)
 
-Registered users can access the full listing, including contact info, for active offers
-![Detailed Offers Page](documentation/images/OffersDetail.png)
+Logged in users can access contact and additional information for active offers
+![Detailed Offers Page](documentation/images/OffersDetailsm.png)
 
 ## Prerequisites
 
