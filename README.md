@@ -8,9 +8,16 @@ The STEWARDSHIP EXCHANGE is a free online resource for cultural heritage agencie
 
 To see the fully functional site, please visit: DEPLOYED VERSION OF THE APP
 
-## Screen Shot
+## Screen Shots
 
-Images in documentation
+The main page introduces the concept and previews current surplus offers
+![Main Page](documentation/images/MainPagesm.png)
+
+Logged in users have their own Home Page
+![User's Home Page](documentation/images/RegisteredUserPagesm.png)
+
+Logged in users can access contact and additional information for active offers
+![Detailed Offers Page](documentation/images/OffersDetailsm.png)
 
 ## Prerequisites
 
