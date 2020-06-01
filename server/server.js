@@ -29,7 +29,7 @@ app.use(passport.session());
 app.use("/api/user", userRouter);
 app.use("/api/offers", offersRouter);
 app.use("/api/contact", contactRouter);
-app.use("/api/story", storyRouter);
+app.use("/api/stories", storyRouter);
 app.use("/api/addoffers", offersRouter);
 app.use("/api/editoffers", offersRouter);
 app.use("/api/offers/userpage", offersRouter);

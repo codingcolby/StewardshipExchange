@@ -34,9 +34,9 @@ const Nav = (props) => {
 				<Link className="nav-link" to="/works">
 					How It Works
 				</Link>
-				<Link className="nav-link" to="/stories">
+				{/* <Link className="nav-link" to="/stories">
 					Exchange Stories
-				</Link>
+				</Link> */}
 				<Link className="nav-link" to="/about">
 					About / Contact
 				</Link>
