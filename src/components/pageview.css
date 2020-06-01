@@ -16,6 +16,11 @@
 } */
 
 /* ELEMENTS ----------*/
+table {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
 h1 {
 	padding: 5px 0px 0px 5px;
 	margin: 0px 0px 0px 0px;
@@ -92,14 +97,14 @@ hr {
 }
 
 .location {
-	width: 125px;
+	width: 150px;
 	border-bottom: 2px solid black;
 	border-radius: 10px;
 	padding: 10px 0px 0px 10px;
 }
 
 .description {
-	width: 650px;
+	width: 700px;
 	border-bottom: 2px solid black;
 	border-radius: 10px;
 	padding: 10px 0px 15px 10px;
